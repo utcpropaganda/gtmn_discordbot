@@ -1,0 +1,11 @@
+users
+ - manually added through the @practiceroomaccess role
+        - might be easier to do an add batch command to make lives 
+        - is there a way for the bot to give users the role?
+        - for now just leave as is, users have access to bot if they have role
+ - users should be based off a static id
+
+dates
+ - have to invalidate dates like 7:25 and such
+ - do not let a user book pr1 or pr2 on the same datetime
+

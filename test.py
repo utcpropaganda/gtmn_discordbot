@@ -1,0 +1,21 @@
+from reservations import Calendar, Reservation
+from datetime import datetime, timedelta
+
+c = Calendar()
+print(c.hours("swagman"))
+c.reserve(2, "monday", datetime.strptime("4:30pm", "%I:%M%p"), 1, "swagman2")
+c.reserve(1, "sunday", datetime.strptime("4:30pm", "%I:%M%p"), 1, "swagman2")
+c.reserve(1, "saturday", datetime.strptime("4:30pm", "%I:%M%p"), 3, "swagman4")
+c.reserve(2, "saturday", datetime.strptime("4:30pm", "%I:%M%p"), 3, "swagman5")
+c.reserve(2, "friday", datetime.strptime("4:30pm", "%I:%M%p"), 3, "swagman6")
+c.reserve(1, "thursday", datetime.strptime("4:30pm", "%I:%M%p"), 3, "swagman7")
+print(c.whohas(1, "monday", datetime.strptime("6:30pm", "%I:%M%p")))
+print(c.whohas(1, "monday", datetime.strptime("6:30pm", "%I:%M%p")))
+print(c.whohas(1, "monday", datetime.strptime("7:30pm", "%I:%M%p")))
+print(c.whohas(1, "monday", datetime.strptime("8:00pm", "%I:%M%p")))
+print(c.whohas(1, "monday", datetime.strptime("8:30pm", "%I:%M%p")))
+print(c.whohas(1, "monday", datetime.strptime("9:00pm", "%I:%M%p")))
+#print(c.hours("swagman"))
+#c.cancel(1, "monday", datetime.strptime("6:30pm", "%I:%M%p"), "swagman")
+#print(c.hours("swagman"))
+c.generate_schedule_image("swagman2")
